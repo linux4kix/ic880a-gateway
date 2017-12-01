@@ -106,7 +106,7 @@ fi
 
 # Build LoRa gateway app
 if [ ! -d lora_gateway ]; then
-    git clone -b legacy https://github.com/TheThingsNetwork/lora_gateway.git
+    git clone -b legacy https://github.com/linux4kix/lora_gateway.git
     pushd lora_gateway
 else
     pushd lora_gateway
@@ -115,7 +115,7 @@ else
     git reset --hard
 fi
 
-sed -i -e 's/PLATFORM= kerlink/PLATFORM= imst_rpi/g' ./libloragw/library.cfg
+sed -i -e 's/PLATFORM= kerlink/PLATFORM= imst_hb2/g' ./libloragw/library.cfg
 
 make
 
